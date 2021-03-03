@@ -1,5 +1,4 @@
 import {appendChildren, addAttributes, removeAllByClass} from './domHandler'
-import image from './rest.jpg'
 import {aboutText} from './content'
 
 const pageLoadContent = () => {

@@ -1,46 +1,33 @@
-import {pageLoadContent} from './pageLoad.js'
-import {createContact} from './contact'
-import createMenu from './menu'
-import {appendChildren} from './domHandler'
+import {pageLoadContent} from './modules/pageLoad.js'
+import {createContact} from './modules/contact'
+import createTabs from './modules/tabbed'
+import {appendChildren} from './modules/domHandler'
 
 pageLoadContent();
+createTabs();
+bindTabEvents();
 
+function bindTabEvents()  {
+  let menuTab = document.getElementById('menuTab');
+  let contactTab = document.getElementById('contactTab');
 
-let parent = document.getElementById("content");
+  menuTab.addEventListener('click',(event) => {switchTabs(event)});
+  contactTab.addEventListener('click', (event) => {switchTabs(event)});
+};
 
-let tabContainer = document.createElement('ul');
-let tab1 = document.createElement('li');
-let tab2 = document.createElement('li');
-
-tab1.textContent = "Menu";
-tab2.textContent = "Contact";
-
-tabContainer.setAttribute('class', 'tabs');
-
-appendChildren(tabContainer, [tab1, tab2]);
-parent.appendChild(tabContainer);
-
-let menu = createMenu();
-
-let contact = createContact();
-appendChildren(parent, [menu, contact]);
-
-tab1.addEventListener('click',  () => {
+function switchTabs(className) {
   let element = document.querySelectorAll('.tabbed-container');
   element.forEach((element) => {
     element.style.display = "none";
   })
 
-  let el = document.querySelector('.menu-tab');
-  el.style.display = 'block';
-})
-
-tab2.addEventListener('click',  () => {
-  let element = document.querySelectorAll('.tabbed-container');
-  element.forEach((element) => {
-    element.style.display = "none";
+  let tabButtons = document.querySelectorAll('.active');
+  tabButtons.forEach((button) => {
+    button.classList.remove('active');
   })
 
-  let el = document.querySelector('.contact-tab');
+  event.target.classList.toggle('active');
+  className = event.target.getAttribute('data-attribute');
+  let el = document.getElementById(className);
   el.style.display = 'block';
-})
+}
