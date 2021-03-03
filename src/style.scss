@@ -84,6 +84,7 @@ nav ul {
 
 .tabbed-container {
   padding: 20px;
+  min-height: 500px;
 }
 
 .food-menu {
@@ -103,5 +104,18 @@ nav ul {
       font-weight: normal;
       text-transform: capitalize;
     }
+  }
+}
+
+
+
+#contact-tab {
+  text-align: center;
+  h3 {
+    font-family: $header-font;
+  }
+
+  p {
+    font-family: $text-font;
   }
 }
