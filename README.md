@@ -26,7 +26,7 @@ This project contains a simple yet dynamic homepage for a restaurant. The goal o
     ```
     git clone https://github.com/smcommits/restaurant.git
     ```
-* Navigate to private-events folder
+* Navigate to restaurant folder
     ```
     cd restaurant/dist/
     ```
