@@ -52,13 +52,16 @@ function createMenuList() {
 
 
 const createMenu = () => {
+  const parent = document.getElementById('content');
   const container = document.createElement('div');
   const list = createMenuList();
   container.appendChild(list);
 
   container.classList.add('tabbed-container');
   container.setAttribute('id', 'menu-tab');
-  return container;
+  container.style.display = 'none';
+
+  parent.appendChild(container)
 };
 
 

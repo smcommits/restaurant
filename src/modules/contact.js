@@ -16,6 +16,7 @@ function contactInfo() {
   return container;
 }
 const createContact = () => {
+  const parent = document.getElementById('content');
   const container = document.createElement('div');
   const contact = contactInfo();
 
@@ -24,8 +25,8 @@ const createContact = () => {
   container.classList.add('tabbed-container');
   container.setAttribute('id', 'contact-tab');
   container.style.display = 'none';
+  parent.appendChild(container);
 
-  return container;
 };
 
 

@@ -1,25 +1,7 @@
 import { appendChildren } from './domHandler';
 import aboutText from './content';
 
-function createHeader() {
-  const header = document.createElement('header');
-  const nav = document.createElement('nav');
-  const ul = document.createElement('ul');
-  const home = document.createElement('a');
-  const about = document.createElement('a');
 
-  home.textContent = 'Home';
-  home.setAttribute('href', '#');
-  about.textContent = 'About';
-  about.setAttribute('href', '#about');
-
-
-  appendChildren(ul, [home, about]);
-  nav.appendChild(ul);
-  header.appendChild(nav);
-
-  return header;
-}
 function createHero() {
   const heroContainer = document.createElement('section');
   const heroHeadline = document.createElement('h2');
@@ -47,10 +29,13 @@ function createAbout() {
 
 const pageLoadContent = () => {
   const parent = document.getElementById('content');
-  const header = createHeader();
+  const container = document.createElement('div');
   const hero = createHero();
   const about = createAbout();
-  appendChildren(parent, [header, hero, about]);
+  container.classList.add('tabbed-container');
+  container.setAttribute('id', 'home-tab');
+  appendChildren(container, [hero, about]);
+  parent.appendChild(container);
 };
 
 

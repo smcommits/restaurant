@@ -1,6 +1,7 @@
 import pageLoadContent from './modules/pageLoad';
 import createTabs from './modules/tabbed';
-
+import createMenu from './modules/menu';
+import createContact from './modules/contact';
 
 const switchTabs = (event) => {
   const element = document.querySelectorAll('.tabbed-container');
@@ -20,14 +21,17 @@ const switchTabs = (event) => {
 };
 
 const bindTabEvents = () => {
+  const homeTab = document.getElementById('homeTab')
   const menuTab = document.getElementById('menuTab');
   const contactTab = document.getElementById('contactTab');
 
-  menuTab.addEventListener('click', (event) => { switchTabs(event); });
-  contactTab.addEventListener('click', (event) => { switchTabs(event); });
+  [homeTab, menuTab, contactTab].forEach((tab) => {
+    tab.addEventListener('click', (event) => {switchTabs(event)});
+  })
 };
 
-
+createTabs()
 pageLoadContent();
-createTabs();
 bindTabEvents();
+createMenu();
+createContact();
