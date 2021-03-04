@@ -15,7 +15,7 @@
 
 ## About
 This project contains a simple yet dynamic homepage for a restaurant. The goal of this project was to create the entire HTML content using DOM manipulation in Javascript
-![screenshot](./screenshot.png)
+![screenshot](./screenshot.jpg)
 
 ## Live Demo
 [Live Demo](https://smcommits.github.io/restaurant/)
