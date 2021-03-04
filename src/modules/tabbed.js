@@ -2,7 +2,7 @@ import createMenu from './menu';
 import createContact from './contact';
 import { appendChildren } from './domHandler';
 
-function createTabs() {
+const createTabs = () => {
   const parent = document.getElementById('content');
   const container = document.createElement('div');
 
@@ -26,7 +26,7 @@ function createTabs() {
   appendChildren(tabContainer, [tab1, tab2]);
   appendChildren(container, [tabContainer, menu, contact]);
   parent.appendChild(container);
-}
+};
 
 export {
   createTabs as default,

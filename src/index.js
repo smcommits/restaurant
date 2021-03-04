@@ -2,7 +2,7 @@ import pageLoadContent from './modules/pageLoad';
 import createTabs from './modules/tabbed';
 
 
-function switchTabs(event) {
+const switchTabs = (event) => {
   const element = document.querySelectorAll('.tabbed-container');
   element.forEach((element) => {
     element.style.display = 'none';
@@ -17,15 +17,15 @@ function switchTabs(event) {
   const className = event.target.getAttribute('data-attribute');
   const el = document.getElementById(className);
   el.style.display = 'block';
-}
+};
 
-function bindTabEvents() {
+const bindTabEvents = () => {
   const menuTab = document.getElementById('menuTab');
   const contactTab = document.getElementById('contactTab');
 
   menuTab.addEventListener('click', (event) => { switchTabs(event); });
   contactTab.addEventListener('click', (event) => { switchTabs(event); });
-}
+};
 
 
 pageLoadContent();
