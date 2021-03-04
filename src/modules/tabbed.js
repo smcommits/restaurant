@@ -1,19 +1,19 @@
-import createMenu from './menu'
-import createContact from './contact'
-import {appendChildren} from './domHandler'
+import createMenu from './menu';
+import createContact from './contact';
+import { appendChildren } from './domHandler';
 
 function createTabs() {
-  let parent = document.getElementById("content");
-  let container = document.createElement('div');
+  const parent = document.getElementById('content');
+  const container = document.createElement('div');
 
-  let tabContainer = document.createElement('ul');
-  let tab1 = document.createElement('li');
-  let tab2 = document.createElement('li');
-  let menu = createMenu()
-  let contact = createContact()
+  const tabContainer = document.createElement('ul');
+  const tab1 = document.createElement('li');
+  const tab2 = document.createElement('li');
+  const menu = createMenu();
+  const contact = createContact();
 
-  tab1.textContent = "Menu";
-  tab2.textContent = "Contact";
+  tab1.textContent = 'Menu';
+  tab2.textContent = 'Contact';
 
   container.setAttribute('class', 'tab-container');
   tabContainer.setAttribute('class', 'tabs');
@@ -29,7 +29,5 @@ function createTabs() {
 }
 
 export {
-  createTabs as default
-}
-
-
+  createTabs as default,
+};

@@ -7,9 +7,9 @@ const aboutText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       tellus, vitae aliquam eros. Morbi vitae neque vitae ex cursus molestie. 
                       Aliquam vehicula arcu sed ipsum interdum, pretium cursus eros facilisis. 
                       Curabitur et volutpat nisl. Cras non gravida arcu. Aliquam eu odio pretium, 
-                      consequat dolor quis, accumsan ipsum. Nunc tristique enim a nisl feugiat luctus.`
+                      consequat dolor quis, accumsan ipsum. Nunc tristique enim a nisl feugiat luctus.`;
 
 
 export {
-  aboutText
-}
+  aboutText as default,
+};
