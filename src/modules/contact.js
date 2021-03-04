@@ -26,7 +26,6 @@ const createContact = () => {
   container.setAttribute('id', 'contact-tab');
   container.style.display = 'none';
   parent.appendChild(container);
-
 };
 
 

@@ -61,7 +61,7 @@ const createMenu = () => {
   container.setAttribute('id', 'menu-tab');
   container.style.display = 'none';
 
-  parent.appendChild(container)
+  parent.appendChild(container);
 };
 
 

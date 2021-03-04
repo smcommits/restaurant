@@ -21,16 +21,16 @@ const switchTabs = (event) => {
 };
 
 const bindTabEvents = () => {
-  const homeTab = document.getElementById('homeTab')
+  const homeTab = document.getElementById('homeTab');
   const menuTab = document.getElementById('menuTab');
   const contactTab = document.getElementById('contactTab');
 
   [homeTab, menuTab, contactTab].forEach((tab) => {
-    tab.addEventListener('click', (event) => {switchTabs(event)});
-  })
+    tab.addEventListener('click', (event) => { switchTabs(event); });
+  });
 };
 
-createTabs()
+createTabs();
 pageLoadContent();
 bindTabEvents();
 createMenu();

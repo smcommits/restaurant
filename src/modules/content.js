@@ -11,5 +11,5 @@ const aboutText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 
 export {
-  aboutText as default
+  aboutText as default,
 };

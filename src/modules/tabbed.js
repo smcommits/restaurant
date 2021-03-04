@@ -1,5 +1,3 @@
-import createMenu from './menu';
-import createContact from './contact';
 import { appendChildren } from './domHandler';
 
 const createTabs = () => {
@@ -13,7 +11,7 @@ const createTabs = () => {
 
   tab1.textContent = 'Home';
   tab2.textContent = 'Menu';
-  tab3.textContent = 'Contact'
+  tab3.textContent = 'Contact';
 
   container.setAttribute('class', 'tab-container');
   tabContainer.setAttribute('class', 'tabs');
@@ -23,7 +21,7 @@ const createTabs = () => {
   tab2.setAttribute('id', 'menuTab');
   tab2.setAttribute('data-attribute', 'menu-tab');
   tab3.setAttribute('id', 'contactTab');
-  tab3.setAttribute('data-attribute', 'contact-tab')
+  tab3.setAttribute('data-attribute', 'contact-tab');
 
   appendChildren(tabContainer, [tab1, tab2, tab3]);
   appendChildren(container, [tabContainer]);
