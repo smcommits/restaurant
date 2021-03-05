@@ -32,6 +32,14 @@ This project contains a simple yet dynamic homepage for a restaurant. The goal o
     ```
 * To interact with the website, open index.html in your web browser.
 
+## Technologies Used
+- Javascript (vanilla)
+- Webpack for bundling the code
+- NPM for dependencies and script handling
+- ESLINT for lining Javascript
+- Sylelint for lining CSS
+
+
 ## Authors
 
 👤 **Anas Siddiqui**
